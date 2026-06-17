@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async vs Sync Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            max-width: 500px;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-bad { background-color: #ef4444; color: white; }
+        .btn-bad:hover { background-color: #dc2626; }
+        .btn-good { background-color: #10b981; color: white; }
+        .btn-good:hover { background-color: #059669; }
+        #display-text {
+            margin-top: 25px;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #38bdf8;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>The Internet Time-Delay Demo</h1>
+        <p>Watch what happens when we don't tell JavaScript to wait for the server across the sea!</p>
+        
+        <button class="btn-bad" id="btn-sync">1. Fetch WITHOUT Async/Await</button>
+        
+        <button class="btn-good" id="btn-async">2. Fetch WITH Async/Await</button>
+
+        <div id="display-text">Click a button to see the behavior...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
